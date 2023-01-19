@@ -2,7 +2,6 @@
 import {CiSearch} from 'react-icons/ci';
 import {MdClose} from 'react-icons/md';
 import NoteItem from '../components/NoteItem';
-import dummyNotes from '../dummy_notes'
 import {BsPlusLg} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { useState ,useEffect} from 'react';
@@ -22,9 +21,9 @@ const Notes = ({notes}) => {
   return (
     <section>
         <header className="notes_header">
-           {!showSearch && <h2>My Notes <button className='btn' onClick={()=>setShowSearch(prevState=> !prevState)}>{showSearch? <MdClose/>:<CiSearch/>}</button></h2>}
-            { showSearch && <input type="text" value={text} onChange={(e)=>{setText(e.target.value);handleSearch();}}  autoFocus placeholder='keyword...'/> }
-            {/* <button className='btn' onClick={()=>setShowSearch(prevState=> !prevState)}><CiSearch/></button> */}
+           {!showSearch && <h2>My Notes </h2>}
+            { showSearch && <input className='input' type="text" value={text} onChange={(e)=>{setText(e.target.value);handleSearch();}}  autoFocus placeholder='keyword...'/> }
+            <button className='btn_search' onClick={()=>setShowSearch(prevState=> !prevState)}>{showSearch? <MdClose/>:<CiSearch/>}</button>
         </header>
         <div className='notes_container'>
           {filteredNotes.length==0 && <p className='empty_notes'>No notes found.</p>}

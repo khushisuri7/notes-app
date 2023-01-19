@@ -41,7 +41,7 @@ const handleDelete =()=>{
   return (
     <section>
         <header className="create-note_header">
-        <Link to='/' className="btn"><IoIosArrowBack/></Link>
+        <Link to='/' className="btn_back"><IoIosArrowBack/></Link>
         <button className="btn lg primary" onClick={handleForm}>Save</button>
         <button className="btn danger" onClick={handleDelete}><RiDeleteBin6Line/></button>
         </header>

@@ -21,7 +21,7 @@ const CreateNote = ({setNotes}) => {
   return (
     <section>
         <header className="create-note_header">
-        <Link to='/' className="btn"><IoIosArrowBack/></Link>
+        <Link to='/' className="btn_back"><IoIosArrowBack/></Link>
         <button className="btn lg primary2" onClick={handleSubmit}>Save</button>
         </header>
         <form className="create-note_form" onSubmit={handleSubmit}>
